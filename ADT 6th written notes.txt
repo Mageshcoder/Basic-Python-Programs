@@ -1,0 +1,57 @@
+     EX NO 6 OBJECT STORAGE AND RETRIEVAL IN MYSQL
+
+---AIM:---
+To Write a Program Object Storage And Retrieval In Mysql.  
+
+---Input---
+shell>JS>util.dumpInstance("bucketPrefix", {osBucketName: "mds-bucket",
+osNamespace: "NamespaceID", threads: n, ocimds: true, compatibility:
+["strip_restricted_grants"]})
+
+---Output---
+All transactions have been started Locking
+instance for backup Global read lock has
+been released Writing global DDL files
+Writing users DDL
+Writing DDL for schema `world` Writing
+DDL for table `world`.`city`
+Preparing data dump for table `world`.`city`
+Data dump for table `world`.`city` will be chunked using column
+`ID`
+similarly for all(naaney add pannan)
+
+Running data dump using 8 threads.....
+
+Schemas dumped: 3
+Tables dumped: 7
+Uncompressed data size: 514.22 KB
+Compressed data size: 106.78 KB
+Compression ratio: 4.8
+Rows written: 10843 Bytes
+written: 106.78 KB
+
+
+---Object Retrieval with MySQL---
+using the following command:
+>MySQL>JS> \c userName@DBSystemEndpointIPAddress
+where:
+\c:
+
+---Output:---
+provide the password:********
+Save password Y OR N
+
+---Command to import data from an Object Storage---
+>MySQL>JS>util.loadDump("bucketPrefix", {osBucketName: "mds- bucket",
+osNamespace: "NamespaceID", threads: n})
+
+---Output---
+[Worker006] world_x@countryinfo@@0.tsv.zst: Records: 239 Deleted: 0
+Skipped: 0 Warnings: 0
+
+similarly for all(naaney add pannan)
+
+0 warnings 7 chunks
+
+RESULT:
+ Thus the above program is executed successfully.

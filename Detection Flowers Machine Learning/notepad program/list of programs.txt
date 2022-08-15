@@ -1,0 +1,9 @@
+Vowels			(done)
+Prime number		(done)
+2d,3d dimension 
+Fibonacci series	(done)
+Upper nd lower	
+String length		(done)
+Patterns		(done)
+Loops   	(done)
+Reverse string      (done)

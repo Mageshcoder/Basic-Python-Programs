@@ -1,0 +1,88 @@
+ : : : : : : : : : : QUESTION 1 : : : : : : : : : : 
+Students Marks In school, the teacher wants to calculate the subject marks of the student. she can do it by manual but the number of students in the class was around 250. she wants to calculate the specific subject marks for individual students in the class. Because she wanted to highlight the important subject marks to their parents in the parents-teachers association meeting. Can you help her to calculate the subject marks by writing code in c++ program?
+
+(Hint - Inheritance Concepts)
+
+
+
+ : : : : : : : : : : QUESTION 2 : : : : : : : : : : 
+Confused Pappu
+Pappu is confused between 6 & 9. He works in the billing department of ABC company and his work is to return the remaining amount to customers. If the actual remaining amount is given, we need to find the maximum possible extra amount given by Pappu to the customers.
+
+For example:-
+
+If the actual remaining amount = 56. Then maximum possible extra amount = (59 - 56 ) = 3.
+
+
+
+Format:
+
+Input:
+
+The first line of the input contains a single integer T denoting the number of test cases.
+The first line of each test case contains N (actual remaining amount).
+
+Output:
+
+For each test case, the output for the maximum possible extra amount should be in the new line.
+
+
+
+Constraints:
+
+1 ≤ T ≤ 102
+
+1 ≤ N ≤ 10000001
+
+ 
+
+Example:
+
+Input:
+
+3
+
+6
+
+66
+
+666
+
+Output:
+
+3
+
+33
+
+333
+
+kjs-wjtk-vws
+
+CODE :
+
+#include<bits/stdc++.h>
+using namespace std ;
+int main()
+{
+	int t , n , extra , rem , temp , place = 1 ;
+	cin >> t ; 
+	while(t--)
+	{
+	    extra = 0 ;
+	    place = 1 ;
+	    cin >> n ;
+    	temp = n ;
+    	while(n)
+    	{
+    	    rem = n%10 ;
+    	    if(rem == 6)
+    	        rem = 9 ;     
+    	    rem *= place ;
+    	    extra += rem ;
+    	    n /= 10 ;
+    	    place *= 10 ;
+    	}
+    	cout << extra - temp << endl ;
+	}
+	return(0);
+}
